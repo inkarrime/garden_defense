@@ -13,4 +13,8 @@ add_executable(garden_defense main.cpp
         Entidades/Planta.cpp
         Entidades/Planta.h
         Entidades/Zombi.cpp
-        Entidades/Zombi.h)
+        Entidades/Zombi.h
+        Plantas/Girasol.cpp
+        Plantas/Girasol.h
+        Plantas/Cactus.cpp
+        Plantas/Cactus.h)
