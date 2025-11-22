@@ -3,4 +3,8 @@ project(garden_defense)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(garden_defense main.cpp)
+add_executable(garden_defense main.cpp
+        Juego/Menu.cpp
+        Juego/Menu.h
+        Juego/Juego.cpp
+        Juego/Juego.h)
