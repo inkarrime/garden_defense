@@ -6,7 +6,7 @@
 class Cactus : public Planta {
 private:
     int danioContacto;
-    int zombisEliminados;
+    int zombiesEliminados;
 
 public:
     Cactus(int fila, int columna);
@@ -16,7 +16,7 @@ public:
     void habilidadPasiva() override;
     string obtenerSimbolo() const override;
     void mostrarInfo() const override;
-    void aplicarDanioContacto(Entidad* zombi);
+    void aplicarDanioContacto(Entidad* zombie);
 };
 
 #endif

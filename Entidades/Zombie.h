@@ -1,17 +1,17 @@
-#ifndef ZOMBI_H
-#define ZOMBI_H
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
 
 #include "Entidad.h"
 
-class Zombi : public Entidad {
+class Zombie : public Entidad {
 protected:
     int danio;
     int velocidad; // Turnos necesarios para avanzar
     int contadorMovimiento;
 
 public:
-    Zombi(string nombre, int hp, int danio, int velocidad, int fila, int columna);
-    virtual ~Zombi();
+    Zombie(string nombre, int hp, int danio, int velocidad, int fila, int columna);
+    virtual ~Zombie();
 
     // Metodos virtuales
     virtual void mover();

@@ -3,7 +3,7 @@
 
 Cactus::Cactus(int fila, int columna)
     : Planta("Cactus", 150, 125, 10, 1, fila, columna),
-      danioContacto(15), zombisEliminados(0) {
+      danioContacto(15), zombiesEliminados(0) {
     turnosParaAtacar = 2; // Ataca cada 2 turnos
 }
 
@@ -15,17 +15,17 @@ void Cactus::atacar() {
 }
 
 void Cactus::habilidadPasiva() {
-    // El daño por contacto se maneja cuando un zombi toca al cactus
+    // El daño por contacto se maneja cuando un zombie toca al cactus
 }
 
-void Cactus::aplicarDanioContacto(Entidad* zombi) {
-    if (!viva || !zombi || !zombi->estaViva()) return;
+void Cactus::aplicarDanioContacto(Entidad* zombie) {
+    if (!viva || !zombie || !zombie->estaViva()) return;
 
-    cout << "🌵 " << nombre << " daña al zombi por contacto (" << danioContacto << " danio)!" << endl;
-    *zombi -= danioContacto;
+    cout << "🌵 " << nombre << " daña al zombie por contacto (" << danioContacto << " danio)!" << endl;
+    *zombie -= danioContacto;
 
-    if (!zombi->estaViva()) {
-        zombisEliminados++;
+    if (!zombie->estaViva()) {
+        zombiesEliminados++;
     }
 }
 
@@ -38,5 +38,5 @@ void Cactus::mostrarInfo() const {
          << " | Costo: " << right << setw(3) << costo
          << " soles | Danio: " << setw(3) << danio
          << " | HP: " << setw(3) << hp << "/" << setw(3) << hpMaximo
-         << " | Eliminados: " << zombisEliminados << endl;
+         << " | Eliminados: " << zombiesEliminados << endl;
 }
