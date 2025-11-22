@@ -7,4 +7,10 @@ add_executable(garden_defense main.cpp
         Juego/Menu.cpp
         Juego/Menu.h
         Juego/Juego.cpp
-        Juego/Juego.h)
+        Juego/Juego.h
+        Entidades/Entidad.cpp
+        Entidades/Entidad.h
+        Entidades/Planta.cpp
+        Entidades/Planta.h
+        Entidades/Zombi.cpp
+        Entidades/Zombi.h)
