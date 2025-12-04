@@ -15,6 +15,6 @@ int main() {
 #endif
 
     Juego juego;
-    juego.iniciar();
+    juego.ejecutar();
     return 0;
 }

@@ -2,57 +2,29 @@
 #define JUEGO_H
 
 #include "Menu.h"
-#include "Mapa.h"
-#include "Oleada.h"
-#include "../Sistema/Estadisticas.h"
-#include "../Sistema/Archivo.h"
-#include <string>
+#include "Partida.h"
+
+using namespace std;
 
 class Juego {
 private:
     Menu menu;
-    Mapa* mapa;
-    Archivo* archivo;
-    string nombreJugador;
-    bool ejecutando;
-
-    // Estado del juego
-    int oleadaActual;
-    int oleadasTotales;
-    int soles;
-    int zombiesEliminados;
-    bool enPartida;
+    Partida partida;
 
     // Metodos privados
-    void jugar();
-    void verEstadisticas();
+    void iniciarPartida();
+    void mostrarEstadisticas();
     void salir();
-    void pedirNombreJugador();
-
-    // Fase de preparacion
-    void fasePreparacion();
-    void menuPreparacion();
-    void mostrarTiendasPlantas();
-    void plantarPlanta();
-    void eliminarPlantaMapa();
-
-    // Fase de combate
-    void faseCombate();
-    void iniciarOleada();
-    void ejecutarTurno();
-    void verificarEstadoJuego();
-
-    // Utilidades
-    void limpiarPantalla();
-    void pausar();
-    void mostrarVictoria();
-    void mostrarDerrota();
-    void guardarEstadisticas(bool victoria);
 
 public:
+    // Constructor
     Juego();
+
+    // Destructor
     ~Juego();
-    void iniciar();
+
+    // Metodo
+    void ejecutar();
 };
 
 #endif
