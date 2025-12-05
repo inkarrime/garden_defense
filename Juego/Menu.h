@@ -12,8 +12,9 @@ public:
     // Destructor
     ~Menu();
 
-    // Metodo principal
-    int mostrarMenu();
+    // Método principal
+    static int mostrarMenu();
+    static int mostrarMenuParaSalir();
 };
 
 #endif // MENU_H

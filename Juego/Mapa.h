@@ -1,30 +1,40 @@
 #ifndef MAPA_H
 #define MAPA_H
 
-#include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
 class Mapa {
 private:
-    static const int FILAS = 5;
-    static const int COLUMNAS = 9;
-    string tablero[5][9];
+    int filas;
+    int columnas;
+    vector<vector<char>> casillas;
 
-    void inicializarMapa();
+    void inicializarCasillas();
+    void dibujarBordeSuperior() const;
+    void dibujarBordeInferior() const;
+    void dibujarFila(int numFila) const;
 
 public:
-    // Constructor
     Mapa();
-
-    // Destructor
+    Mapa(int f, int c);
     ~Mapa();
 
-    // Mostrar el mapa en consola
     void mostrarMapa() const;
+    void reiniciar(int f, int c);
+    void limpiar();
 
-    // Getters para las dimensiones
+    bool colocarPlanta(int fila, int col, char simbolo);
+    bool eliminarPlanta(int fila, int col);
+    bool colocarZombi(int fila, int col, char simbolo);
+    bool eliminarZombi(int fila, int col);
+
     int getFilas() const;
     int getColumnas() const;
+    char getCasilla(int fila, int col) const;
+    bool casillaVacia(int fila, int col) const;
+    bool tienePlantas() const; // NUEVO: verificar si hay plantas
 };
 
-#endif // MAPA_H
+#endif

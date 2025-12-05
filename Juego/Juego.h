@@ -11,10 +11,10 @@ private:
     Menu menu;
     Partida partida;
 
-    // Metodos privados
+    // Métodos privados
     void iniciarPartida();
-    void mostrarEstadisticas();
-    void salir();
+    void mostrarStats();
+    void salirDelJuego() ;
 
 public:
     // Constructor
@@ -23,8 +23,8 @@ public:
     // Destructor
     ~Juego();
 
-    // Metodo
-    void ejecutar();
+    // Método
+    void ejecutar() ;
 };
 
 #endif
